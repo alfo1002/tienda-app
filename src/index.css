@@ -269,15 +269,6 @@ button {
     line-height: inherit;
 }
 
-button {
-    text-transform: none;
-}
-
-button,
-[type=button] {
-    -webkit-appearance: button;
-}
-
 button:not(:disabled),
 [type=button]:not(:disabled) {
     cursor: pointer;
@@ -809,7 +800,7 @@ button:not(:disabled),
 }
 
 .header {
-    /*background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/header.jpg");*/
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("/img/header.jpg");
     background-position: 50%;
     background-size: cover;
     position: relative;
