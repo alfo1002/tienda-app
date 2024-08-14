@@ -6,8 +6,10 @@ import productos from './data/bd_productos'
 
 function App() {
 
+  const initialCart = JSON.parse(localStorage.getItem('cart')) || []
+
   const [data, setData] = useState([])
-  const [cart, setCart] = useState([])
+  const [cart, setCart] = useState(initialCart)
 
   const MAX_PRODUCTS_CART = 3
 
