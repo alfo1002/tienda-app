@@ -83,7 +83,7 @@ function App() {
         clearCart={clearCart}
       />
       <main className="container-xl">
-        <h2 className="text-center pt-3">Nuestros Productos</h2>
+        <h2 className="text-center pt-3">Catálogo de Productos</h2>
 
         <div className="row mt-5">
           {data.map((prod) => (
