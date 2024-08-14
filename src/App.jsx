@@ -15,6 +15,10 @@ function App() {
     setData(productos)
   }, [])
 
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cart))
+  }, [cart])
+
   const addProductToCart = (producto) => {
     const item = cart.findIndex(prod => prod.id === producto.id)
     if (item >= 0) {
