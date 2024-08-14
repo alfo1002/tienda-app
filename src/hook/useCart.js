@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import productos from '../data/bd_productos'
 
 export const useCart = () => {
@@ -70,6 +70,9 @@ export const useCart = () => {
         setCart([])
     }
 
+    const isEmpty = useMemo(() => cart.length === 0, [cart])
+    const cartTotal = () => cart.reduce((total, item) => total + (item.precio * item.cantidad), 0)
+
     return {
         data,
         cart,
@@ -77,7 +80,9 @@ export const useCart = () => {
         removeProductFromCart,
         increaseQuantity,
         decreaseQuantity,
-        clearCart
+        clearCart,
+        isEmpty,
+        cartTotal
     }
 
 }
