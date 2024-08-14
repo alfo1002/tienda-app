@@ -63,6 +63,10 @@ function App() {
     }
   }
 
+  const clearCart = () => {
+    setCart([])
+  }
+
   return (
     <>
       <Header
@@ -70,6 +74,7 @@ function App() {
         removeProductFromCart={removeProductFromCart}
         increaseQuantity={increaseQuantity}
         decreaseQuantity={decreaseQuantity}
+        clearCart={clearCart}
       />
       <main className="container-xl">
         <h2 className="text-center pt-3">Nuestros Productos</h2>

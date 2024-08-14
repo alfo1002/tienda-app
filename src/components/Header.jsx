@@ -1,6 +1,6 @@
 import { useMemo } from "react"
 
-export const Header = ({ cart, removeProductFromCart, increaseQuantity, decreaseQuantity }) => {
+export const Header = ({ cart, removeProductFromCart, increaseQuantity, decreaseQuantity, clearCart }) => {
 
     const isEmpty = useMemo(() => cart.length === 0, [cart])
     const cartTotal = () => cart.reduce((total, item) => total + (item.precio * item.cantidad), 0)
@@ -88,6 +88,7 @@ export const Header = ({ cart, removeProductFromCart, increaseQuantity, decrease
 
                                         <button
                                             className="btn btn-dark w-100 mt-3 p-2"
+                                            onClick={clearCart}
                                         >Vaciar Carrito</button>
                                     </>
                                 )}
